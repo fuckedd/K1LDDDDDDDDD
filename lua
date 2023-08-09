@@ -15,7 +15,7 @@ local function onChatted(message)
     local arg = message:sub(#prefixBrightness + 1):lower()
     
     if message:sub(1, #prefixBrightness) == prefixBrightness then
-        if arg == "true" then
+        if arg == "false" then
             if not isAutoRunning then
                 isAutoRunning = true
                 while isAutoRunning do
@@ -23,7 +23,7 @@ local function onChatted(message)
                     wait(0.5)
                 end
             end
-        elseif arg == "false" then
+        elseif arg == "true" then
             isAutoRunning = false
             toggleBrightnessEffects(false)
         else
